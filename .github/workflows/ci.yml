@@ -21,11 +21,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install backend dependencies
-        run: |
-          cd backend
-          npm install
-
       - name: Install Cypress and Allure dependencies
         run: npm install --save-dev cypress @shelex/cypress-allure-plugin allure-commandline
 
