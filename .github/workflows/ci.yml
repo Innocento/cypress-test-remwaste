@@ -26,26 +26,6 @@ jobs:
           cd backend
           npm install
 
-      - name: Install frontend dependencies
-        run: |
-          cd frontend
-          npm install
-
-      - name: Start backend
-        run: |
-          cd backend
-          nohup node server.js &
-        shell: bash
-
-      - name: Start frontend
-        run: |
-          cd frontend
-          nohup npx serve -s build -l 3000 &
-        shell: bash
-
-      - name: Wait for frontend and backend to be ready
-        run: sleep 15
-
       - name: Install Cypress and Allure dependencies
         run: npm install --save-dev cypress @shelex/cypress-allure-plugin allure-commandline
 
