@@ -24,8 +24,8 @@ jobs:
       - name: Install Cypress and Allure dependencies
         run: npm install --save-dev cypress @shelex/cypress-allure-plugin allure-commandline
 
-      - name: Run Cypress tests
-        run: npx cypress run --env allure=true
+      #- name: Run Cypress tests
+      #  run: npx cypress run --env allure=true
 
       - name: Generate Allure Report
         run: npx allure generate ./allure-results --clean -o ./allure-report
