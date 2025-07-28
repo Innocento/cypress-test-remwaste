@@ -1,3 +1,4 @@
+// register page
 class RegisterPage {
   enterUsername(username) {
     cy.get('input[placeholder="Username"]').clear().type(username);
